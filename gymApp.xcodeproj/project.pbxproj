@@ -11,6 +11,7 @@
 		C3629A942A6DF27200360D98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629A932A6DF27200360D98 /* ContentView.swift */; };
 		C3629A962A6DF27400360D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3629A952A6DF27400360D98 /* Assets.xcassets */; };
 		C3629A992A6DF27400360D98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3629A982A6DF27400360D98 /* Preview Assets.xcassets */; };
+		C3629AA12A6DFC1300360D98 /* gym-app.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C3629AA02A6DFC1300360D98 /* gym-app.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C3629A932A6DF27200360D98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C3629A952A6DF27400360D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3629A982A6DF27400360D98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C3629AA02A6DFC1300360D98 /* gym-app.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gym-app.sqlite"; path = "../../../gym-app/gym-app.sqlite"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,9 @@
 		C3629A902A6DF27200360D98 /* gymApp */ = {
 			isa = PBXGroup;
 			children = (
-				C3629A912A6DF27200360D98 /* gymAppApp.swift */,
+				C3629A9F2A6DFBD000360D98 /* Database */,
 				C3629A932A6DF27200360D98 /* ContentView.swift */,
+				C3629A912A6DF27200360D98 /* gymAppApp.swift */,
 				C3629A952A6DF27400360D98 /* Assets.xcassets */,
 				C3629A972A6DF27400360D98 /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				C3629A982A6DF27400360D98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C3629A9F2A6DFBD000360D98 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C3629AA02A6DFC1300360D98 /* gym-app.sqlite */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3629AA12A6DFC1300360D98 /* gym-app.sqlite in Resources */,
 				C3629A992A6DF27400360D98 /* Preview Assets.xcassets in Resources */,
 				C3629A962A6DF27400360D98 /* Assets.xcassets in Resources */,
 			);
