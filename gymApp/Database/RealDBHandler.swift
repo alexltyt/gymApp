@@ -24,7 +24,8 @@ class DBHelper {
             print("Database Exists (already)!")
         } else {
             // If the database does not exist, copy it from the main bundle to the document directory.
-            guard let bundleDatabasePath = Bundle.main.resourceURL?.appendingPathComponent(databaseName).path else{
+            guard let bundleDatabasePath = Bundle.main.resourceURL?.appendingPathComponent(databaseName).path
+            else{
                 print("Unwrapping Error:Bundle Database Path doesn't exist")
                 return nil
             }
