@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */; };
+		C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */; };
+		C34DA84C2A7DC0B8001BF368 /* gym-app.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C34DA84B2A7DC0B8001BF368 /* gym-app.sqlite */; };
 		C3629A922A6DF27200360D98 /* gymAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629A912A6DF27200360D98 /* gymAppApp.swift */; };
 		C3629A942A6DF27200360D98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629A932A6DF27200360D98 /* ContentView.swift */; };
 		C3629A962A6DF27400360D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3629A952A6DF27400360D98 /* Assets.xcassets */; };
 		C3629A992A6DF27400360D98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3629A982A6DF27400360D98 /* Preview Assets.xcassets */; };
-		C3629AA12A6DFC1300360D98 /* gym-app.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C3629AA02A6DFC1300360D98 /* gym-app.sqlite */; };
+		C3629AA32A7C417000360D98 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629AA22A7C417000360D98 /* DatabaseManager.swift */; };
+		C3629AA62A7C477D00360D98 /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = C3629AA52A7C477D00360D98 /* FMDB */; };
+		C3629AA82A7C723A00360D98 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629AA72A7C723A00360D98 /* ActivityView.swift */; };
+		C3629AAD2A7C806C00360D98 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = C3629AAC2A7C806C00360D98 /* SQLite */; };
+		C3629AAF2A7C8A2C00360D98 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629AAE2A7C8A2C00360D98 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDBHandler.swift; sourceTree = "<group>"; };
+		C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerSQLite.swift; sourceTree = "<group>"; };
+		C34DA84B2A7DC0B8001BF368 /* gym-app.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gym-app.sqlite"; sourceTree = "<group>"; };
 		C3629A8E2A6DF27200360D98 /* gymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3629A912A6DF27200360D98 /* gymAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gymAppApp.swift; sourceTree = "<group>"; };
 		C3629A932A6DF27200360D98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C3629A952A6DF27400360D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3629A982A6DF27400360D98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C3629AA02A6DFC1300360D98 /* gym-app.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gym-app.sqlite"; path = "../../../gym-app/gym-app.sqlite"; sourceTree = "<group>"; };
+		C3629AA22A7C417000360D98 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		C3629AA72A7C723A00360D98 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		C3629AAE2A7C8A2C00360D98 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3629AAD2A7C806C00360D98 /* SQLite in Frameworks */,
+				C3629AA62A7C477D00360D98 /* FMDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +67,12 @@
 		C3629A902A6DF27200360D98 /* gymApp */ = {
 			isa = PBXGroup;
 			children = (
+				C34DA84B2A7DC0B8001BF368 /* gym-app.sqlite */,
 				C3629A9F2A6DFBD000360D98 /* Database */,
 				C3629A932A6DF27200360D98 /* ContentView.swift */,
 				C3629A912A6DF27200360D98 /* gymAppApp.swift */,
+				C3629AA72A7C723A00360D98 /* ActivityView.swift */,
+				C3629AAE2A7C8A2C00360D98 /* Activity.swift */,
 				C3629A952A6DF27400360D98 /* Assets.xcassets */,
 				C3629A972A6DF27400360D98 /* Preview Content */,
 			);
@@ -73,7 +90,9 @@
 		C3629A9F2A6DFBD000360D98 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				C3629AA02A6DFC1300360D98 /* gym-app.sqlite */,
+				C3629AA22A7C417000360D98 /* DatabaseManager.swift */,
+				C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */,
+				C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -94,6 +113,10 @@
 			dependencies = (
 			);
 			name = gymApp;
+			packageProductDependencies = (
+				C3629AA52A7C477D00360D98 /* FMDB */,
+				C3629AAC2A7C806C00360D98 /* SQLite */,
+			);
 			productName = gymApp;
 			productReference = C3629A8E2A6DF27200360D98 /* gymApp.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +145,10 @@
 				Base,
 			);
 			mainGroup = C3629A852A6DF27200360D98;
+			packageReferences = (
+				C3629AA42A7C477D00360D98 /* XCRemoteSwiftPackageReference "fmdb" */,
+				C3629AAB2A7C806C00360D98 /* XCRemoteSwiftPackageReference "SQLite" */,
+			);
 			productRefGroup = C3629A8F2A6DF27200360D98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -136,7 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3629AA12A6DFC1300360D98 /* gym-app.sqlite in Resources */,
+				C34DA84C2A7DC0B8001BF368 /* gym-app.sqlite in Resources */,
 				C3629A992A6DF27400360D98 /* Preview Assets.xcassets in Resources */,
 				C3629A962A6DF27400360D98 /* Assets.xcassets in Resources */,
 			);
@@ -149,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */,
+				C3629AAF2A7C8A2C00360D98 /* Activity.swift in Sources */,
 				C3629A942A6DF27200360D98 /* ContentView.swift in Sources */,
+				C3629AA82A7C723A00360D98 /* ActivityView.swift in Sources */,
 				C3629A922A6DF27200360D98 /* gymAppApp.swift in Sources */,
+				C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */,
+				C3629AA32A7C417000360D98 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +383,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3629AA42A7C477D00360D98 /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		C3629AAB2A7C806C00360D98 /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3629AA52A7C477D00360D98 /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3629AA42A7C477D00360D98 /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+		C3629AAC2A7C806C00360D98 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3629AAB2A7C806C00360D98 /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3629A862A6DF27200360D98 /* Project object */;
 }
