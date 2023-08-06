@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */; };
 		C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */; };
-		C34DA84C2A7DC0B8001BF368 /* gym-app.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C34DA84B2A7DC0B8001BF368 /* gym-app.sqlite */; };
+		C34DA8502A7F1A39001BF368 /* gym-app.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = C34DA84F2A7F1A39001BF368 /* gym-app.sqlite */; };
 		C3629A922A6DF27200360D98 /* gymAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629A912A6DF27200360D98 /* gymAppApp.swift */; };
 		C3629A942A6DF27200360D98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3629A932A6DF27200360D98 /* ContentView.swift */; };
 		C3629A962A6DF27400360D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3629A952A6DF27400360D98 /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDBHandler.swift; sourceTree = "<group>"; };
 		C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerSQLite.swift; sourceTree = "<group>"; };
-		C34DA84B2A7DC0B8001BF368 /* gym-app.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gym-app.sqlite"; sourceTree = "<group>"; };
+		C34DA84F2A7F1A39001BF368 /* gym-app.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gym-app.sqlite"; sourceTree = "<group>"; };
 		C3629A8E2A6DF27200360D98 /* gymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3629A912A6DF27200360D98 /* gymAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gymAppApp.swift; sourceTree = "<group>"; };
 		C3629A932A6DF27200360D98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		C3629A902A6DF27200360D98 /* gymApp */ = {
 			isa = PBXGroup;
 			children = (
-				C34DA84B2A7DC0B8001BF368 /* gym-app.sqlite */,
+				C34DA84F2A7F1A39001BF368 /* gym-app.sqlite */,
 				C3629A9F2A6DFBD000360D98 /* Database */,
 				C3629A932A6DF27200360D98 /* ContentView.swift */,
 				C3629A912A6DF27200360D98 /* gymAppApp.swift */,
@@ -163,7 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34DA84C2A7DC0B8001BF368 /* gym-app.sqlite in Resources */,
+				C34DA8502A7F1A39001BF368 /* gym-app.sqlite in Resources */,
 				C3629A992A6DF27400360D98 /* Preview Assets.xcassets in Resources */,
 				C3629A962A6DF27400360D98 /* Assets.xcassets in Resources */,
 			);

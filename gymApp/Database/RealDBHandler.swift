@@ -56,7 +56,7 @@ class DBHelper {
             print("Error: Database pointer is nil.")
             return
         }
-
+  
         // SQL query to select all rows from the "activity" table.
         let query = "SELECT * FROM activity;"
 
