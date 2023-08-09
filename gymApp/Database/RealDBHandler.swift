@@ -82,13 +82,67 @@ class DBHelper {
         sqlite3_close(db)
     }
     
-    var databasePointer: OpaquePointer?
-
-    func testDBExists2() {
-        if let dbPointer = DBHelper.getDatabasePointer(databaseName: "gym-app.sqlite") {
-            databasePointer = dbPointer
-        } else {
-            print("Oh my god. Stopped at testDBExists2 func.")
+    static func fetchActivitiesByParts(bodyparts: String) -> [String] {
+        // Get the database pointer.
+        guard let db = getDatabasePointer(databaseName: "gym-app.sqlite") else {
+            print("Error: Database pointer is nil.")
+            return []
         }
+        
+        var bodyPartNumber = 0
+        switch bodyparts {
+        case "chest":
+            bodyPartNumber = 1
+        case "back":
+            bodyPartNumber = 2
+        case "arms":
+            bodyPartNumber = 3
+        case "shoulders":
+            bodyPartNumber = 4
+        case "legs":
+            bodyPartNumber = 5
+        case "calves":
+            bodyPartNumber = 6
+        case "core":
+            bodyPartNumber = 7
+        default:
+            print("Unexpected body part: \(bodyparts)")
+            return []
+        }
+        
+        var selectedActivities: [String] = []
+        let query = "SELECT * FROM activity WHERE activity_id LIKE '\(bodyPartNumber)%';"
+        var statement: OpaquePointer?
+        
+        // Prepare the SQL query for execution.
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            // Execute the prepared statement and iterate through the result rows.
+            while sqlite3_step(statement) == SQLITE_ROW {
+                // Get the activity ID and name from the current row.
+                let activityId = sqlite3_column_int(statement, 0)
+                if let activityName = sqlite3_column_text(statement, 1) {
+                    let name = String(cString: activityName)
+                    selectedActivities.append(name)
+                }
+            }
+            // Finalize the statement after use.
+            sqlite3_finalize(statement)
+        } else {
+            print("Error: Failed to prepare the query.")
+        }
+
+        // Close the database connection.
+        sqlite3_close(db)
+        return selectedActivities
     }
+
+//    var databasePointer: OpaquePointer?
+//
+//    func testDBExists2() {
+//        if let dbPointer = DBHelper.getDatabasePointer(databaseName: "gym-app.sqlite") {
+//            databasePointer = dbPointer
+//        } else {
+//            print("Oh my god. Stopped at testDBExists2 func.")
+//        }
+//    }
 }
