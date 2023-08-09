@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct SelectBodyPartsView: View {
-    @State private var selectedPart = ""
-    let stringArray = showActivity()
+    @State private var selectedPart = 0
     
     var body: some View {
         
@@ -17,43 +16,49 @@ struct SelectBodyPartsView: View {
             VStack{
                 HStack{
                     Button("Chest"){
-                        selectedPart = selectedBodyPaty("chest")
+                        selectedPart = BodyPartModel.selectedBodyPaty("chest")
                     }.padding(5)
                     Button("Back"){
-                        selectedPart = selectedBodyPaty("back")
+                        selectedPart = BodyPartModel.selectedBodyPaty("back")
                     }.padding(5)
                     Button("Arms"){
-                        selectedPart = selectedBodyPaty("arms")
+                        selectedPart = BodyPartModel.selectedBodyPaty("arms")
                     }.padding(5)
                     Button("Shoulders"){
-                        selectedPart = selectedBodyPaty("shoulders")
+                        selectedPart = BodyPartModel.selectedBodyPaty("shoulders")
                     }.padding(5)
                 }
                 HStack{
                     Button("Legs"){
-                        selectedPart = selectedBodyPaty("legs")
+                        selectedPart = BodyPartModel.selectedBodyPaty("legs")
                     }.padding(5)
                     Button("Calves"){
-                        selectedPart = selectedBodyPaty("calves")
+                        selectedPart = BodyPartModel.selectedBodyPaty("calves")
                     }.padding(5)
                     Button("Core"){
-                        selectedPart = selectedBodyPaty("core")
+                        selectedPart = BodyPartModel.selectedBodyPaty("core")
                     }.padding(5)
                 }
             }.foregroundColor(.red)
             Spacer()
             VStack{
-                if selectedPart != "" {
-                    VStack {
-                        ForEach(DBHelper.fetchActivitiesByParts(bodyparts: selectedPart), id: \.self) { buttonText in
-                            Button(action: {}) {
-                                Text(buttonText)
+                VStack{
+                    if selectedPart != 0 {
+                        VStack {
+                            ForEach(BodyPartModel.fetchActivitiesByParts(bodyPartNumber: selectedPart), id: \.self) { buttonText in
+                                Button(action: {}) {
+                                    Text(buttonText)
+                                }
+                                .padding(5)
+                                Divider()
                             }
+                        }.background()
                             .padding(5)
-                            Divider()
-                        }
-                    }.background()
-                        .padding(5)
+                    }
+                }
+                Spacer()
+                VStack(){
+                    
                 }
             }
         }
