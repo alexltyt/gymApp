@@ -15,7 +15,7 @@ struct ActivityView: View {
         VStack {
             Text("Testing DB exisit or not:")
             Button("Fetch Activity") {
-                DBHelper.fetchAllActivities()
+                BodyPartModel.fetchAllActivities()
             }
         }
             
