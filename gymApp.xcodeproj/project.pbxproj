@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E5E1A062A8C0DCF0000C5F1 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E1A052A8C0DCF0000C5F1 /* Button.swift */; };
 		7E5E1A0A2A8C11180000C5F1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E1A092A8C11180000C5F1 /* Calendar.swift */; };
 		C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */; };
 		C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E5E1A052A8C0DCF0000C5F1 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		7E5E1A092A8C11180000C5F1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDBHandler.swift; sourceTree = "<group>"; };
 		C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerSQLite.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				C3629A972A6DF27400360D98 /* Preview Content */,
 				C34DA8512A7F235D001BF368 /* SelectBodyPartsView.swift */,
 				C34DA8532A7F2439001BF368 /* BodyPartModel.swift */,
-				7E5E1A052A8C0DCF0000C5F1 /* Button.swift */,
 				7E5E1A092A8C11180000C5F1 /* Calendar.swift */,
 			);
 			path = gymApp;
@@ -194,7 +191,6 @@
 				C3629A942A6DF27200360D98 /* ContentView.swift in Sources */,
 				C3629AA82A7C723A00360D98 /* ActivityView.swift in Sources */,
 				C3629A922A6DF27200360D98 /* gymAppApp.swift in Sources */,
-				7E5E1A062A8C0DCF0000C5F1 /* Button.swift in Sources */,
 				C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */,
 				C3629AA32A7C417000360D98 /* DatabaseManager.swift in Sources */,
 				C34DA8542A7F2439001BF368 /* BodyPartModel.swift in Sources */,
