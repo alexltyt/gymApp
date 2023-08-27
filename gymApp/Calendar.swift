@@ -25,7 +25,7 @@ struct Calander: View {
                     .textFieldStyle(DefaultTextFieldStyle())
 
                 // Due date
-                DatePicker("Due Date", selection: $dueDate)
+                DatePicker("Enter your date", selection: $dueDate, displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
 
                 // Button create
@@ -42,5 +42,3 @@ struct Calander_Previews: PreviewProvider {
         Calander()
     }
 }
-
-
