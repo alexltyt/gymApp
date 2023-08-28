@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500E36B82A944BDF00C86C3E /* TemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E36B72A944BDF00C86C3E /* TemplateViewModel.swift */; };
+		500E36BA2A944BF700C86C3E /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E36B92A944BF700C86C3E /* TemplateView.swift */; };
 		7E5E1A0A2A8C11180000C5F1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E1A092A8C11180000C5F1 /* Calendar.swift */; };
 		C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */; };
 		C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500E36B72A944BDF00C86C3E /* TemplateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewModel.swift; sourceTree = "<group>"; };
+		500E36B92A944BF700C86C3E /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		7E5E1A092A8C11180000C5F1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDBHandler.swift; sourceTree = "<group>"; };
 		C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerSQLite.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				C34DA8512A7F235D001BF368 /* SelectBodyPartsView.swift */,
 				C34DA8532A7F2439001BF368 /* BodyPartModel.swift */,
 				7E5E1A092A8C11180000C5F1 /* Calendar.swift */,
+				500E36B72A944BDF00C86C3E /* TemplateViewModel.swift */,
+				500E36B92A944BF700C86C3E /* TemplateView.swift */,
 			);
 			path = gymApp;
 			sourceTree = "<group>";
@@ -193,6 +199,8 @@
 				C3629A922A6DF27200360D98 /* gymAppApp.swift in Sources */,
 				C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */,
 				C3629AA32A7C417000360D98 /* DatabaseManager.swift in Sources */,
+				500E36BA2A944BF700C86C3E /* TemplateView.swift in Sources */,
+				500E36B82A944BDF00C86C3E /* TemplateViewModel.swift in Sources */,
 				C34DA8542A7F2439001BF368 /* BodyPartModel.swift in Sources */,
 				C34DA8522A7F235D001BF368 /* SelectBodyPartsView.swift in Sources */,
 			);
