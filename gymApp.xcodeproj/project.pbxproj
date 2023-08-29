@@ -10,6 +10,7 @@
 		500E36B82A944BDF00C86C3E /* TemplateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E36B72A944BDF00C86C3E /* TemplateViewModel.swift */; };
 		500E36BA2A944BF700C86C3E /* TemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500E36B92A944BF700C86C3E /* TemplateView.swift */; };
 		7E5E1A0A2A8C11180000C5F1 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E1A092A8C11180000C5F1 /* Calendar.swift */; };
+		7EA55E352A9C4FDA008C05BD /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA55E342A9C4FDA008C05BD /* CalendarViewModel.swift */; };
 		C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */; };
 		C34DA8422A7D68F7001BF368 /* DBManagerSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */; };
 		C34DA8522A7F235D001BF368 /* SelectBodyPartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34DA8512A7F235D001BF368 /* SelectBodyPartsView.swift */; };
@@ -30,6 +31,7 @@
 		500E36B72A944BDF00C86C3E /* TemplateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewModel.swift; sourceTree = "<group>"; };
 		500E36B92A944BF700C86C3E /* TemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateView.swift; sourceTree = "<group>"; };
 		7E5E1A092A8C11180000C5F1 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		7EA55E342A9C4FDA008C05BD /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		C34DA83F2A7CA32B001BF368 /* RealDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDBHandler.swift; sourceTree = "<group>"; };
 		C34DA8412A7D68F7001BF368 /* DBManagerSQLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerSQLite.swift; sourceTree = "<group>"; };
 		C34DA8512A7F235D001BF368 /* SelectBodyPartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBodyPartsView.swift; sourceTree = "<group>"; };
@@ -87,9 +89,10 @@
 				C3629A972A6DF27400360D98 /* Preview Content */,
 				C34DA8512A7F235D001BF368 /* SelectBodyPartsView.swift */,
 				C34DA8532A7F2439001BF368 /* BodyPartModel.swift */,
-				7E5E1A092A8C11180000C5F1 /* Calendar.swift */,
 				500E36B72A944BDF00C86C3E /* TemplateViewModel.swift */,
 				500E36B92A944BF700C86C3E /* TemplateView.swift */,
+				7E5E1A092A8C11180000C5F1 /* Calendar.swift */,
+				7EA55E342A9C4FDA008C05BD /* CalendarViewModel.swift */,
 			);
 			path = gymApp;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				7E5E1A0A2A8C11180000C5F1 /* Calendar.swift in Sources */,
 				C34DA8402A7CA32B001BF368 /* RealDBHandler.swift in Sources */,
 				C3629AAF2A7C8A2C00360D98 /* Activity.swift in Sources */,
+				7EA55E352A9C4FDA008C05BD /* CalendarViewModel.swift in Sources */,
 				C3629A942A6DF27200360D98 /* ContentView.swift in Sources */,
 				C3629AA82A7C723A00360D98 /* ActivityView.swift in Sources */,
 				C3629A922A6DF27200360D98 /* gymAppApp.swift in Sources */,

@@ -8,9 +8,8 @@
 
 import SwiftUI
 
-struct Calander: View {
-    @State private var title: String = ""
-    @State private var dueDate: Date = Date()
+struct CalendarView: View {
+    @StateObject private var viewModel = CalendarViewModel()
 
     var body: some View {
         VStack {
@@ -21,24 +20,24 @@ struct Calander: View {
 
             Form {
                 // Title
-                TextField("Title", text: $title)
+                TextField("Title", text: $viewModel.title)
                     .textFieldStyle(DefaultTextFieldStyle())
 
                 // Due date
-                DatePicker("Enter your date", selection: $dueDate, displayedComponents: .date)
+                DatePicker("Enter your date", selection: $viewModel.dueDate, displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
 
                 // Button create
                 Button("Create") {
-                    // Implement your create logic here
+                    viewModel.handleCreateButtonTapped()
                 }
             }
         }
     }
 }
 
-struct Calander_Previews: PreviewProvider {
+struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        Calander()
+        CalendarView()
     }
 }
