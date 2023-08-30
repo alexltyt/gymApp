@@ -9,16 +9,18 @@ import Foundation
 import SQLite3
 
 class BodyPartModel{
-    static func fetchActivitiesByParts(bodyPartNumber:Int) -> [String] {
+    static func fetchActivitiesByParts(bodyPartNumber:Int) -> [Int:String] {
         // Get the database pointer.
         guard let db = DBHelper.getDatabasePointer(databaseName: "gym-app.sqlite") else {
             print("Error: Database pointer is nil.")
-            return []
+            return [:]
         }
         
         let bodyPartNumber = bodyPartNumber
-        var selectedActivities: [String] = []
+        //var selectedActivities: [String] = []
+        var activityDictionary = [Int:String]()
         let query = "SELECT * FROM activity WHERE activity_id LIKE '\(bodyPartNumber)%';"
+        //let query = "SELECT * FROM activity;"
         var statement: OpaquePointer?
         
         // Prepare the SQL query for execution.
@@ -26,12 +28,22 @@ class BodyPartModel{
             // Execute the prepared statement and iterate through the result rows.
             while sqlite3_step(statement) == SQLITE_ROW {
                 // Get the activity ID and name from the current row.
-                let activityId = sqlite3_column_int(statement, 0)
-                if let activityName = sqlite3_column_text(statement, 1) {
-                    let name = String(cString: activityName)
-                    selectedActivities.append(name)
-                }
+                let activityIdInt32 = sqlite3_column_int(statement, 0)
+                let activityId = Int(activityIdInt32)
+                let activityNamePointer = sqlite3_column_text(statement, 1)
+                let activityName = activityNamePointer != nil ? String(cString: activityNamePointer!) : "N/A"
+                
+                //selectedActivities.append(activityName)
+                activityDictionary[activityId] = activityName
             }
+            
+//            let sortedKeys = activityDictionary.keys.sorted()
+//            for key in sortedKeys {
+//                if let activityName = activityDictionary[key] {
+//                    print("Activity ID: \(key), Activity Name: \(activityName)")
+//                }
+//            }
+
             // Finalize the statement after use.
             sqlite3_finalize(statement)
         } else {
@@ -40,7 +52,8 @@ class BodyPartModel{
 
         // Close the database connection.
         sqlite3_close(db)
-        return selectedActivities
+        //return selectedActivities
+        return activityDictionary
     }
     
     //get all activities
@@ -76,7 +89,7 @@ class BodyPartModel{
         sqlite3_close(db)
     }
     
-    static func selectedBodyPaty(_ bodyparts: String) -> Int{
+    static func selectedBodyPart(_ bodyparts: String) -> Int{
         
         var bodyPartNumber = 0
         switch bodyparts {
@@ -94,6 +107,8 @@ class BodyPartModel{
             bodyPartNumber = 6
         case "core":
             bodyPartNumber = 7
+        case "aerobic":
+            bodyPartNumber = 8
         default:
             print("Unexpected body part: \(bodyparts)")
             return 0
