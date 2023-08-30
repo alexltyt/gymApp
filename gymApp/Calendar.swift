@@ -13,7 +13,7 @@ struct CalendarView: View {
 
     var body: some View {
         VStack {
-            Text("New Workout!")
+            Text("New Workout")
                 .font(.system(size: 32))
                 .bold()
                 .padding(.top, 100)
