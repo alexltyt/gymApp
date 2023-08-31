@@ -12,8 +12,9 @@ class CalendarViewModel: ObservableObject {
     @Published var dueDate: Date = Date()
     @Published var selectedDate: Date? // Added property for selected date
     
-    func handleCreateButtonTapped() {
+    func handleCreateButtonTapped() -> Date? { // Updated return type
         selectedDate = dueDate // Save the selected date
+        return selectedDate
     }
 }
 
